@@ -14,7 +14,7 @@
     <meta name="keywords" content="空想">
 
 
-<title>空想</title>
+<title>商店 | 空想</title>
 
 
 
@@ -89,89 +89,81 @@
     }
 </script>
         <div class="main">
-            
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/"><img src="/image/avatar.jpeg"></a>
-        </div>
-        <div class="nickname">空想</div>
-        <div class="description"><p>…</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="电报" target="_blank" rel="noopener" href="https://t.me/kuusoo4869">
-                        
-                            电报
-                        
-                        
-                    </a>
-                
-                    <a class="link-item" title="微信" href="/微信">
-                        
-                            微信
-                        
-                        
-                    </a>
-                
-                    <a class="link-item" title="TG群" target="_blank" rel="noopener" href="https://t.me/+wJ1plX5bJE4yNTVl">
-                        
-                            TG群
-                        
-                        
-                    </a>
-                
-                    <a class="link-item" title="QQ群" target="_blank" rel="noopener" href="https://qm.qq.com/q/XfZCzho3kI">
-                        
-                            QQ群
-                        
-                        
-                    </a>
-                
-            
-        </div>
-
-        <br>
-
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Windows" href="/kuusoo.zip">
-                        
-                            Windows
-                        
-                        
-                    </a>
-                
-            
-        </div>
-
-        <br>
-
-        <div class="links">
-            
-                
-                    <a class="link-item" title="机场" href="/机场">
-                        
-                            机场
-                        
-                        
-                    </a>
-                
-                    <a class="link-item" title="商店" href="/商店">
-                        
-                            商店
-                        
-                        
-                    </a>
-                
-            
-        </div>
-        
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">展开</a>
+        <a onclick="go_top()">顶部</a>
+        <a onclick="go_bottom()">底部</a>
     </div>
 </div>
 
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "收起"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "展开"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+    
+    <article class="post-wrap page">
+        
+        <h1 class="post-title">商店</h1>
+        
+        <section class="post-content">
+            <h1 id="建设中"><a href="#建设中" class="headerlink" title="建设中"></a>建设中</h1>
+        </section>
+    </article>
+</div>
 
         </div>
         <footer id="footer" class="footer">
